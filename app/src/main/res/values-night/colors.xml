@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#507AAE</color>
+    <color name="purple_700">#000000</color>
+    <color name="teal_200">#5072BA</color>
+    <color name="blue" tools:ignore="MissingDefaultResource">#2979FF</color>
+    <color name="black">#000000</color>
+    <color name="white">#CBD3D9</color>
+    <color name="white1">#CBD3D9</color>
+    <color name="green">#D73564C7</color>
+
+    <color name="settingsback">#000</color>
+    <color name="homecolor">#000000</color>
+    <color name="textcolor">#FFFFFF</color>
+    <color name="allmovie">#000000</color>
+
+</resources>

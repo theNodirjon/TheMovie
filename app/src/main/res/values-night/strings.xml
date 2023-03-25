@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto">Auto</string>
+    <string name="dark_mod">dark_mode</string>
+    <string name="tap_toloading">Tap toloading</string>
+</resources>
