@@ -47,6 +47,7 @@ class PresenterAllMovie(private val view: AllMoviePresenter.View) : AllMoviePres
     }
 
     private var page=0
+
     private fun loadUpcomingMovies() {
 
         page++
@@ -62,8 +63,6 @@ class PresenterAllMovie(private val view: AllMoviePresenter.View) : AllMoviePres
 
                         Log.d("TAGaaa", "loadUpcomingMovies:${t.results}")
                     }
-
-
                     override fun onError(e: Throwable) {
                         view.showError(e.message!!)
                     }
@@ -84,18 +83,14 @@ class PresenterAllMovie(private val view: AllMoviePresenter.View) : AllMoviePres
                         view.showData(t.results as List<BaseType>)
 
                     }
-
                     override fun onError(e: Throwable) {
                         view.showError(e.message!!)
                     }
-
                 })
         )
-
     }
 
     private fun loadTopRatedMovies() {
-
         compositeDisposable.add(
             call.getTopRated()
                 .subscribeOn(Schedulers.newThread())
@@ -134,4 +129,5 @@ class PresenterAllMovie(private val view: AllMoviePresenter.View) : AllMoviePres
         )
 
     }
+
 }

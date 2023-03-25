@@ -3,7 +3,7 @@ package com.exemple.movie.adapter.nowPlaying
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.exemple.movie.databinding.SecondSubItemBinding
+import com.exemple.movie.databinding.FirstSubItemBinding
 import com.exemple.movie.model.response.nowPlaying.Result
 
 class NowPlayingMovieAdapter:RecyclerView.Adapter<NowPlayingMovieViewHolder>() {
@@ -16,7 +16,7 @@ class NowPlayingMovieAdapter:RecyclerView.Adapter<NowPlayingMovieViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NowPlayingMovieViewHolder {
-        return NowPlayingMovieViewHolder(SecondSubItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return NowPlayingMovieViewHolder(FirstSubItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun onBindViewHolder(holder: NowPlayingMovieViewHolder, position: Int) {

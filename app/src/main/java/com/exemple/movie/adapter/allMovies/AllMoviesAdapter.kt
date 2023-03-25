@@ -3,7 +3,6 @@ package com.exemple.movie.adapter.allMovies
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.exemple.movie.adapter.nowPlaying.NowPlayingMovieViewHolder
 import com.exemple.movie.databinding.AllMoviesItemBinding
 import com.exemple.movie.model.response.base.BaseType
 import com.exemple.movie.model.response.home.popular.Result
@@ -28,11 +27,15 @@ class AllMoviesAdapter:RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             BaseType.TYPE_TopRated->{
                 TopRatedMovieViewHolder(AllMoviesItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
             }
+            BaseType.TYPE_NowPlaying->{
+                NowPlayingMovieViewHolder(AllMoviesItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            }
 
             else->{
                 UpcomingMovieViewHolder(AllMoviesItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
             }
         }
+
         return holder
 
     }
@@ -53,6 +56,12 @@ class AllMoviesAdapter:RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 (holder as TopRatedMovieViewHolder).bindData(data[position] as com.exemple.movie.model.response.home.topRated.Result)
                 holder.binding.root.setOnClickListener {
                     onAllMovieItemClick?.invoke((data[position] as com.exemple.movie.model.response.home.topRated.Result).id)
+                }
+            }
+            BaseType.TYPE_NowPlaying->{
+                (holder as NowPlayingMovieViewHolder).bindData(data[position]as com.exemple.movie.model.response.home.nowPlaying.Result)
+                holder.binding.root.setOnClickListener {
+                    onAllMovieItemClick?.invoke((data[position] as com.exemple.movie.model.response.home.nowPlaying.Result).id)
                 }
             }
             BaseType.TYPE_Upcoming->{

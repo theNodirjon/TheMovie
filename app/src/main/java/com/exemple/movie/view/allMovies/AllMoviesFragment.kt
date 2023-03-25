@@ -1,6 +1,5 @@
 package com.exemple.movie.view.allMovies
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,7 +47,7 @@ class AllMoviesFragment:BaseFragment(), AllMoviePresenter.View {
             findNavController().popBackStack()
         }
 
-        movieType?.let { (presenter as PresenterAllMovie).loadData(it) }
+        movieType.let { (presenter as PresenterAllMovie).loadData(it) }
     }
 
     override fun getLayout(inflater: LayoutInflater, container: ViewGroup?): View {
